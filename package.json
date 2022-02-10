@@ -1,0 +1,28 @@
+{
+  "name": "koa-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vicweiyu/koa-demo.git"
+  },
+  "keywords": [
+    "Koa"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vicweiyu/koa-demo/issues"
+  },
+  "homepage": "https://github.com/vicweiyu/koa-demo#readme",
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "koa": "^2.13.4"
+  }
+}
