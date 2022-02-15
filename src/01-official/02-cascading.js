@@ -2,6 +2,8 @@ const Koa = require('koa');
 
 const app = new Koa();
 
+app.context.test = 'Koa Context Test';
+
 console.log(app);
 
 // Logger
@@ -12,6 +14,8 @@ app.use(async (ctx, next) => {
 
   const rt = ctx.response.get('X-Response-Time');
   console.log(`${ctx.method} ${ctx.url} : ${rt}`);
+
+  console.log(ctx.test);
 
   console.log(6);
 });
