@@ -10,12 +10,15 @@ console.log(app);
 app.use(async (ctx, next) => {
   console.log(1);
 
+  ctx.state.param = 1111;
+
   await next();
 
   const rt = ctx.response.get('X-Response-Time');
   console.log(`${ctx.method} ${ctx.url} : ${rt}`);
 
   console.log(ctx.test);
+  console.log(ctx.state.param);
 
   console.log(6);
 });
@@ -23,6 +26,8 @@ app.use(async (ctx, next) => {
 // X-Response-Time
 app.use(async (ctx, next) => {
   console.log(2);
+
+  console.log(ctx.state.param);
 
   const start = Date.now();
 
@@ -37,6 +42,8 @@ app.use(async (ctx, next) => {
 // Response
 app.use(async (ctx) => {
   console.log(3);
+
+  console.log(ctx.state.param);
 
   ctx.body = 'Hello World!';
 
