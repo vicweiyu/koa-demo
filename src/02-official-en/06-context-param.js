@@ -2,10 +2,15 @@ const Koa = require('koa');
 
 const app = new Koa();
 
-app.context.param = '1111';
+app.context.globalParam = {
+  p: 1111,
+  f: () => 'func',
+};
 
 app.use(async (ctx) => {
-  ctx.body = ctx.param;
+  const { p, f } = ctx.globalParam;
+
+  ctx.body = `${p} ${f()}`;
 });
 
 app.listen(3000);

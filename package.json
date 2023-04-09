@@ -19,10 +19,10 @@
     "url": "https://github.com/vicweiyu/koa-demo/issues"
   },
   "homepage": "https://github.com/vicweiyu/koa-demo#readme",
-  "devDependencies": {
-    "prettier": "^2.5.1"
-  },
   "dependencies": {
-    "koa": "^2.13.4"
+    "koa": "^2.14.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7"
   }
 }

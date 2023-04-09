@@ -3,12 +3,13 @@ const Koa = require('koa');
 const app = new Koa();
 
 app.use(async (ctx) => {
-  ctx.cusErr = 'Error Code (3000) ';
+  ctx.serverError = 'Error Code: 3000';
+
   throw new Error('3000');
 });
 
 app.on('error', (err, ctx) => {
-  console.log(`On Error:${err.message}, ${ctx.cusErr}`);
+  console.log(`Server Error: ${err.message}, ${ctx.serverError}`);
 });
 
 app.listen(3000);

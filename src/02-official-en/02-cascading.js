@@ -9,7 +9,7 @@ app.use(async (ctx, next) => {
   await next();
 
   const rt = ctx.response.get('X-response-time');
-  console.log(`Response Time:${rt}`);
+  console.log(`Response Time: ${rt}`);
 
   console.log(6);
 });

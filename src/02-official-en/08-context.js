@@ -26,11 +26,13 @@ app.use(async (ctx) => {
   // Unsupported
   // nodeRes.statusCode = 404;
 
-  // console.log(ctx.app);
+  console.log(ctx.app);
 
   ctx.app.emit('log', reqCount);
 
   ctx.body = 'Koa Context';
+
+  console.log('ctx.status: ' + ctx.status);
 
   // Way 1
   /*
